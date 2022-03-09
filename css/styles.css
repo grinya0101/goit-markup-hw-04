@@ -130,7 +130,11 @@ ul {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url("../image/home/team.jpg");
 }
 
@@ -199,19 +203,19 @@ ul {
 }
 
 .plan-icon::before {
-  background-image: url("../image/icon/antenna.png");
+  background-image: url("../image/icon/antenna.svg");
 }
 
 .plan-vector::before {
-  background-image: url("../image/icon/vector.png");
+  background-image: url("../image/icon/clock.svg");
 }
 
 .plan-diagram::before {
-  background-image: url("../image/icon/diagram.png");
+  background-image: url("../image/icon/diagram.svg");
 }
 
 .plan-astronaut::before {
-  background-image: url("../image/icon/astronaut.png");
+  background-image: url("../image/icon/astronaut.svg");
 }
 
 .plan-item:last-child {
@@ -311,6 +315,93 @@ ul {
   text-align: center;
 }
 
+.team-icon-list {
+  display: flex;
+  padding-top: 16px;
+  justify-content: center;
+}
+
+.team-icon {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.team-icon:last-child {
+  margin-right: 0;
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.icon:hover {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+
+.icon-social-network {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.icon:hover .icon-social-network {
+  fill: #ffffff;
+}
+
+/*Наши клиенты*/
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 94px;
+}
+
+.logo-clients-link {
+  display: flex;
+  width: 106px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-clients {
+  margin-right: 30px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.logo-clients:hover {
+  border-color: #2196f3;
+}
+
+.logo-clients:last-child {
+  margin-right: 0;
+}
+
+.regular-customers {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--accent-color);
+  margin-top: 94px;
+}
+
+.logo-clients-icon:hover {
+  fill: #2196f3;
+}
+
+.logo-clients-link {
+  fill: #afb1b8;
+}
+
 /*футер*/
 .footer {
   background: #2f303a;
@@ -319,6 +410,7 @@ ul {
   padding-bottom: 60px;
 }
 .footer-link {
+  display: inline-block;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -345,6 +437,59 @@ ul {
 
 .footer-contacts-mail:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.footer-icon-list {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  margin-left: 70px;
+}
+
+.footer-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social-network {
+  width: 20px;
+  height: 20px;
+}
+
+.container-footer {
+  display: flex;
+}
+
+.join {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 12px;
+  margin-left: 10px;
+}
+
+.team-footer {
+  margin-right: 10px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon:hover {
+  fill: #ffffff;
+  background-color: #2196f3;
+}
+
+.footer-social-network {
+  fill: #ffffff;
 }
 
 /*страница портфолио*/
@@ -476,6 +621,11 @@ a {
   margin-left: 30px;
   background: #ffffff;
   box-sizing: border-box;
+}
+
+.list-title:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .subject {
