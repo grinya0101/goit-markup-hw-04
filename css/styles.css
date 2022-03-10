@@ -91,6 +91,24 @@ ul {
   padding-top: 94px;
 }
 
+.nav-contacts-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.nav-contacts-icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.nav-contacts-icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
 /*контакты хедер*/
 .contacts-link {
   margin-right: 50px;
@@ -100,6 +118,14 @@ ul {
   margin-right: 0;
 }
 
+a:hover .nav-contacts-icon-mail {
+  fill: var(--primary-text-color);
+}
+
+a:focus .nav-contacts-icon-mail {
+  fill: var(--primary-text-color);
+}
+
 .contacts-phone:hover,
 .contacts-phone:focus,
 .contacts-mail:hover,
@@ -107,9 +133,16 @@ ul {
   color: var(--primary-text-color);
 }
 
+a:hover .nav-contacts-icon-phone {
+  fill: var(--primary-text-color);
+}
+
+a:focus .nav-contacts-icon-phone {
+  fill: var(--primary-text-color);
+}
+
 .contacts-phone,
 .contacts-mail {
-  display: block;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -117,6 +150,7 @@ ul {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 }
 
 .hero {
@@ -124,7 +158,7 @@ ul {
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
-  height: 600px;
+
   margin-left: auto;
   margin-right: auto;
   background-position: center;
@@ -339,7 +373,8 @@ ul {
   border-radius: 50%;
 }
 
-.icon:hover {
+.icon:hover,
+.icon:focus {
   fill: #ffffff;
   background-color: #2196f3;
 }
@@ -350,7 +385,8 @@ ul {
   fill: #afb1b8;
 }
 
-.icon:hover .icon-social-network {
+.icon:hover .icon-social-network,
+.icon:focus .icon-social-network {
   fill: #ffffff;
 }
 
@@ -365,23 +401,35 @@ ul {
 
 .logo-clients-link {
   display: flex;
-  width: 106px;
-  height: 60px;
+  width: 100%;
+  height: 100%px;
   justify-content: center;
   align-items: center;
-}
-
-.logo-clients {
-  margin-right: 30px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
-.logo-clients:hover {
+.logo-clients {
+  margin-right: 30px;
+  width: 170px;
+  height: 92px;
+}
+
+.logo-clients-link:hover,
+.logo-clients-link:focus {
+  fill: #2196f3;
+}
+
+.logo-clients-link:hover,
+.logo-clients-link:focus {
   border-color: #2196f3;
 }
 
-.logo-clients:last-child {
+.logo-clients {
+  fill: #2196f3;
+}
+
+.logo-clients-link:hover . .logo-clients:last-child {
   margin-right: 0;
 }
 
@@ -394,8 +442,14 @@ ul {
   margin-top: 94px;
 }
 
-.logo-clients-icon:hover {
+.logo-clients-icon:hover .logo-clients-link,
+.logo-clients-icon:focus .logo-clients-link {
   fill: #2196f3;
+}
+
+.logo-clients-icon {
+  width: 106px;
+  height: 60px;
 }
 
 .logo-clients-link {
@@ -408,6 +462,10 @@ ul {
   margin: 0;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.container-wrapper {
+  margin-right: 70px;
 }
 .footer-link {
   display: inline-block;
@@ -441,9 +499,7 @@ ul {
 
 .footer-icon-list {
   display: flex;
-  padding-top: 20px;
   justify-content: center;
-  margin-left: 70px;
 }
 
 .footer-icon {
@@ -462,6 +518,7 @@ ul {
 
 .container-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .join {
@@ -470,9 +527,7 @@ ul {
   line-height: 16px;
   text-transform: uppercase;
   color: #ffffff;
-  text-align: center;
-  padding-top: 12px;
-  margin-left: 10px;
+  margin-bottom: 20px;
 }
 
 .team-footer {
@@ -483,7 +538,8 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-icon:hover {
+.footer-icon:hover,
+.footer-icon:focus {
   fill: #ffffff;
   background-color: #2196f3;
 }
@@ -567,6 +623,12 @@ a {
   margin-right: 8px;
 }
 
+.button-benefits:hover,
+.button-benefits:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .button-benefits {
   cursor: pointer;
   color: var(--accent-color);
@@ -623,9 +685,14 @@ a {
   box-sizing: border-box;
 }
 
-.list-title:hover {
+.list-title-wrapper:hover,
+.list-title-wrapper:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.list-title-wrapper {
+  display: block;
 }
 
 .subject {
