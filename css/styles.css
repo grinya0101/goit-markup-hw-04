@@ -208,6 +208,32 @@ a:focus .nav-contacts-icon-phone {
   margin-right: auto;
 }
 
+/*Модальное окно*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  min-height: 581px;
+  min-width: 528px;
+  background-color: var(--main-tetle-text);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
 /*секция особенности*/
 .title {
   color: var(--accent-color);
@@ -279,6 +305,7 @@ a:focus .nav-contacts-icon-phone {
 .about-item {
   flex-basis: calc((100% - 3 * 60px) / 3);
   margin-right: 30px;
+  position: relative;
 }
 
 .about-item:last-child {
@@ -290,6 +317,24 @@ a:focus .nav-contacts-icon-phone {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.about-text {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.aboute-desc {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-top: 27px;
 }
 
 /*наша команда*/
@@ -681,6 +726,35 @@ a {
 .mail:hover,
 .mail:focus {
   color: var(--primary-text-color);
+}
+
+.list-title-wrapper:hover::before {
+  opacity: 1;
+}
+
+.list-title-wrapper {
+  position: relative;
+}
+
+.list-title-wrapper::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
+
+.lopa {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--main-tetle-text);
+  justify-content: center;
 }
 
 /* заголовок */
